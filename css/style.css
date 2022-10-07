@@ -1,29 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
-.principal {
-  width: 100vw;
-  height: 40rem;
-  background-color: #93bf85;
-}
-
-.about {
-  width: 100vw;
-  height: 20rem;
-  background-color: #6eaa5e;
-}
-
-.contact {
-  width: 100vw;
-  height: 20rem;
-  background-color: #ffff;
-}
-
-
-footer {
-  width: 100vw;
-  height: 20rem;
-  background-color: rgb(208, 255, 208);
-}
+@import url('body.css');
+@import url('footer.css');
+@import url('header.css');
+@import url('main.css');

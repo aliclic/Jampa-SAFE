@@ -1,0 +1,22 @@
+@import url('body.css');
+@import url('footer.css');
+@import url('header.css');
+@import url('main.css');
+
+.contact {
+    width: 100vw;
+    height: 20rem;
+    background-color: #ffff;
+  }
+
+.about {
+    width: 100vw;
+    height: 20rem;
+    background-color: #6eaa5e;
+  }
+
+.principal {
+    width: 100vw;
+    height: 40rem;
+    background-color: #93bf85;
+  }
