@@ -4,9 +4,101 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jampa Safe </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Jampa Safe</title>
 </head>
 <body>
-    
+    <nav class="navbar navbar-expand-lg px-4">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="/imgs/logo.png" width="150" height="70" alt="logo"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      
+
+      <main>
+        <section class="slogan d-flex justify-content-around m-0 m-auto mt-5 mx-4">
+            <div class="frase d-flex flex-column align-self-center">
+                <h2 class="fs-1">Ajude João Pessoa!</h2>
+                <p class="mt-3 fs-3">Encontrou algum problema ambiental?</p>
+                <span class="mt-1 fs-4">Relate aqui!<button type="button" class="btn btn-success mx-4 fs-5">Relatar</button></span>
+            </div>
+            <div class="undraw">
+                <img src="/imgs/undraw-nature.png" width="350px" height="300px" alt="imagem ilustrativa de interação internet e meio ambiente">
+            </div>
+        </section>
+
+        <section class="principal mt-5">
+            <h3 class="text-center text-uppercase">Problemas</h3>
+            <div class="cards">
+                <div class="card" style="width: 18rem;">
+                    <img src="" class="card-img-top" alt="image">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">bairro</li>
+                      <li class="list-group-item">data</li>
+                      <li class="list-group-item">descrição</li>
+                    </ul>
+                    <div class="card-body">
+                        <button type="button" class="btn btn-danger">Excluir</button>
+                        <button type="button" class="btn btn-warning">Alterar</button>
+                    </div>
+                  </div>
+            </div>
+        </section>
+
+        <section class="about">
+            <h3 class="text-center text-uppercase">Sobre nós</h3>
+        </section>
+
+        <section class="contact">
+            <h3 class="text-center text-uppercase">Entre em contato com a gente</h3>
+        </section>
+      </main>
+
+
+
+
+      <footer>
+        <h3 class="text-center text-uppercase">Footer</h3>
+      </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="/js/main.js"></script>
 </body>
 </html>
