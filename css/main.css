@@ -1,3 +1,6 @@
+main {
+  width: 100vw;
+}
 
 .contact {
     width: 100vw;
@@ -13,6 +16,16 @@
 
 .principal {
     width: 100vw;
-    height: 40rem;
+    max-height: auto;
     background-color: #93bf85;
+  }
+
+  .cards {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .card {
+    border: none;
+    border-radius: 10px;
   }
