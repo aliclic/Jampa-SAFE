@@ -26,17 +26,6 @@
               <li class="nav-item">
                 <a class="nav-link" href="#">Contact</a>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
             </ul>
             <form class="d-flex" role="search">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -52,7 +41,47 @@
             <div class="frase d-flex flex-column align-self-center">
                 <h2 class="fs-1">Ajude João Pessoa!</h2>
                 <p class="mt-3 fs-3">Encontrou algum problema ambiental?</p>
-                <span class="mt-1 fs-4">Relate aqui!<button type="button" class="btn btn-success mx-4 fs-5">Relatar</button></span>
+                <span class="mt-1 fs-4">Relate aqui!
+                  <button type="button" class="btn btn-primary mx-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Relatar
+                  </button>
+                  
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">Delatar Problema</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <form>
+                            <div class="mb-3">
+                              <label for="formFile" class="form-label">Imagem</label>
+                              <input class="form-control" type="file" id="formFile">
+                            </div>
+
+                            <select class="form-select mb-2 mt-2" aria-label="Default select example">
+                              <option selected>Bairro</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                            <div class="mb-3">
+                              <label for="title" class="form-label">Data</label>
+                              <input type="date" class="form-control" id="title">
+                            </div>
+
+                            <div class="mb-3">
+                              <label for="exampleFormControlTextarea1" class="form-label">Descrição</label>
+                              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div></span>
             </div>
             <div class="undraw">
                 <img src="/imgs/undraw-nature.png" width="350px" height="300px" alt="imagem ilustrativa de interação internet e meio ambiente">
@@ -60,33 +89,87 @@
         </section>
 
         <section class="principal mt-5">
-            <h3 class="text-center text-uppercase">Problemas</h3>
-            <div class="cards">
-                <div class="card" style="width: 18rem;">
-                    <img src="" class="card-img-top" alt="image">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item">bairro</li>
-                      <li class="list-group-item">data</li>
-                      <li class="list-group-item">descrição</li>
-                    </ul>
-                    <div class="card-body">
-                        <button type="button" class="btn btn-danger">Excluir</button>
-                        <button type="button" class="btn btn-warning">Alterar</button>
-                    </div>
-                  </div>
+            <h3 class="text-center text-uppercase pt-4 text-white">Problemas relatados</h3>
+            <div class="cards d-flex flex-wrap">
+              <div class="card m-5 " style="width: 18rem;">
+                <img src="https://s2.glbimg.com/BwDo4n-338Y5IFxpJNpNqMuA_hA=/0x0:1920x901/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2021/O/j/aQ1dLIS2WoFfawnAgIvg/lixobessa.jpg" class="card-img-top" alt="image">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Bairro:</li>
+                  <li class="list-group-item">Data:</li>
+                  <li class="list-group-item">Descrição:</li>
+                </ul>
+                <div class="card-body d-flex justify-content-around mt-5">
+                    <button type="button" class="btn btn-danger">Excluir</button>
+                    <button type="button" class="btn btn-warning">Alterar</button>
+                </div>
+              </div>
+
+              <div class="card m-5 " style="width: 18rem;">
+                <img src="https://s2.glbimg.com/BwDo4n-338Y5IFxpJNpNqMuA_hA=/0x0:1920x901/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2021/O/j/aQ1dLIS2WoFfawnAgIvg/lixobessa.jpg" class="card-img-top" alt="image">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Bairro:</li>
+                  <li class="list-group-item">Data:</li>
+                  <li class="list-group-item">Descrição:</li>
+                </ul>
+                <div class="card-body d-flex justify-content-around mt-5">
+                    <button type="button" class="btn btn-danger">Excluir</button>
+                    <button type="button" class="btn btn-warning">Alterar</button>
+                </div>
+              </div>
+
+              <div class="card m-5 " style="width: 18rem;">
+                <img src="https://s2.glbimg.com/BwDo4n-338Y5IFxpJNpNqMuA_hA=/0x0:1920x901/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2021/O/j/aQ1dLIS2WoFfawnAgIvg/lixobessa.jpg" class="card-img-top" alt="image">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Bairro:</li>
+                  <li class="list-group-item">Data:</li>
+                  <li class="list-group-item">Descrição:</li>
+                </ul>
+                <div class="card-body d-flex justify-content-around mt-5">
+                    <button type="button" class="btn btn-danger">Excluir</button>
+                    <button type="button" class="btn btn-warning">Alterar</button>
+                </div>
+              </div>
+
+              <div class="card m-5 " style="width: 18rem;">
+                <img src="https://s2.glbimg.com/BwDo4n-338Y5IFxpJNpNqMuA_hA=/0x0:1920x901/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2021/O/j/aQ1dLIS2WoFfawnAgIvg/lixobessa.jpg" class="card-img-top" alt="image">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Bairro:</li>
+                  <li class="list-group-item">Data:</li>
+                  <li class="list-group-item">Descrição:</li>
+                </ul>
+                <div class="card-body d-flex justify-content-around mt-5">
+                    <button type="button" class="btn btn-danger">Excluir</button>
+                    <button type="button" class="btn btn-warning">Alterar</button>
+                </div>
+              </div>
+
+              <div class="card m-5 " style="width: 18rem;">
+                <img src="https://s2.glbimg.com/BwDo4n-338Y5IFxpJNpNqMuA_hA=/0x0:1920x901/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2021/O/j/aQ1dLIS2WoFfawnAgIvg/lixobessa.jpg" class="card-img-top" alt="image">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Bairro:</li>
+                  <li class="list-group-item">Data:</li>
+                  <li class="list-group-item">Descrição:</li>
+                </ul>
+                <div class="card-body d-flex justify-content-around mt-5">
+                    <button type="button" class="btn btn-danger">Excluir</button>
+                    <button type="button" class="btn btn-warning">Alterar</button>
+                </div>
+              </div>
+              
+              
+
+              
+
+             
             </div>
         </section>
 
         <section class="about">
-            <h3 class="text-center text-uppercase">Sobre nós</h3>
+            <h3 class="text-center text-uppercase pt-4 text-white">Sobre nós</h3>
         </section>
 
         <section class="contact">
-            <h3 class="text-center text-uppercase">Entre em contato com a gente</h3>
+            <h3 class="text-center text-uppercase pt-4">Entre em contato com a gente</h3>
         </section>
       </main>
 
