@@ -1,14 +1,23 @@
 footer {
     width: 100vw;
-    height: 15rem;
-    background-color: #198754
-    ;
+    height: auto;
+    background-color: #198754;
+    padding-top: 50px;
+    padding-bottom: 20px;
   }
 
-.social {
-  border-radius: 50%;
+.socials {
+  list-style: none;
+}
+
+.socials a {
   text-decoration: none;
-  color: black;
+  color: #ffff;
+}
+
+.social a i {
+  font-size: 1.1rem;
+  transition: color .4s ease;
 }
 
 .face:hover {
