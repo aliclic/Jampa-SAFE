@@ -10,6 +10,7 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg px-4">
+
         <div class="container-fluid">
           <a class="navbar-brand" href="#"><img src="/imgs/logo.png" width="150" height="70" alt="logo"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,9 +41,9 @@
         <section class="slogan d-flex justify-content-around m-0 m-auto mt-5 mx-4">
             <div class="frase d-flex flex-column align-self-center">
                 <h2 class="fs-1">Ajude João Pessoa!</h2>
-                <p class="mt-3 fs-3">Encontrou algum problema ambiental?</p>
-                <span class="mt-1 fs-4">Relate aqui!
-                  <button type="button" class="btn btn-primary mx-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <p class="mt-3 fs-4">Encontrou algum problema ambiental?</p>
+                <span class="mt-1 fs-5">Relate aqui!
+                  <button type="button" class="btn btn-success mx-3 fs-6" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     Relatar
                   </button>
                   
@@ -81,17 +82,33 @@
                         </div>
                       </div>
                     </div>
-                  </div></span>
+                  </div>
+                </span>
             </div>
+
             <div class="undraw">
                 <img src="/imgs/undraw-nature.png" width="350px" height="300px" alt="imagem ilustrativa de interação internet e meio ambiente">
             </div>
         </section>
 
         <section class="principal mt-5">
-            <h3 class="text-center text-uppercase pt-4 text-white">Problemas relatados</h3>
+            <h3 class="text-center text-uppercase pt-5 text-white">Problemas relatados</h3>
+
             <div class="cards d-flex flex-wrap">
-              <div class="card m-5 " style="width: 18rem;">
+              <div class="card m-5" style="width: 18rem;">
+                <img src="https://s2.glbimg.com/BwDo4n-338Y5IFxpJNpNqMuA_hA=/0x0:1920x901/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2021/O/j/aQ1dLIS2WoFfawnAgIvg/lixobessa.jpg" class="card-img-top" alt="image">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Bairro:</li>
+                  <li class="list-group-item">Data:</li>
+                  <li class="list-group-item">Descrição:</li>
+                </ul>
+                <div class="card-body d-flex justify-content-around mt-5">
+                    <button type="button" class="btn btn-danger">Excluir</button>
+                    <button type="button" class="btn btn-warning">Alterar</button>
+                </div>
+              </div>
+
+              <div class="card m-5" style="width: 18rem;">
                 <img src="https://s2.glbimg.com/BwDo4n-338Y5IFxpJNpNqMuA_hA=/0x0:1920x901/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2021/O/j/aQ1dLIS2WoFfawnAgIvg/lixobessa.jpg" class="card-img-top" alt="image">
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item">Bairro:</li>
@@ -142,42 +159,49 @@
                     <button type="button" class="btn btn-warning">Alterar</button>
                 </div>
               </div>
-
-              <div class="card m-5 " style="width: 18rem;">
-                <img src="https://s2.glbimg.com/BwDo4n-338Y5IFxpJNpNqMuA_hA=/0x0:1920x901/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2021/O/j/aQ1dLIS2WoFfawnAgIvg/lixobessa.jpg" class="card-img-top" alt="image">
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">Bairro:</li>
-                  <li class="list-group-item">Data:</li>
-                  <li class="list-group-item">Descrição:</li>
-                </ul>
-                <div class="card-body d-flex justify-content-around mt-5">
-                    <button type="button" class="btn btn-danger">Excluir</button>
-                    <button type="button" class="btn btn-warning">Alterar</button>
-                </div>
-              </div>
-              
-              
-
-              
-
-             
             </div>
         </section>
 
         <section class="about">
-            <h3 class="text-center text-uppercase pt-4 text-white">Sobre nós</h3>
-        </section>
 
+          <div class="about-container d-flex justify-content-center align-items-center p-5">
+            <div class="about-image">
+              <img src="/imgs/about.png" width="480px" height="414px" alt="sobre nos">
+            </div>
+            <div class="about-us">
+              <p class="text-uppercase fs-6 text-success">sobre nós</p>
+              <h2 class="somos pb-3">Entenda quem somos e por que existimos</h2>
+              <p class="descrip">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum fugiat fugit velit tempore nemo. Sint repellendus nihil maxime porro id, voluptates iure commodi at a quis eveniet dolores distinctio fuga.</p>
+            </div>
+          </section>
+  
         <section class="contact">
-            <h3 class="text-center text-uppercase pt-4">Entre em contato com a gente</h3>
+          <div class="contact-container d-flex justify-content-around align-items-center p-5 m-5">
+            <div class="contact-us w-25">
+              <h2 class="contato pb-3">Entre em contato com a gente!</h2>
+              <p class="descrip pb-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum fugiat fugit velit tempore nemo. Sint repellendus nihil maxime porro id, voluptates iure commodi at a quis eveniet dolores distinctio fuga.</p>
+              <button type="button" class="zap-button btn btn-success">[zap] Entrar em contato</button>
+            </div>
+            <div class="contact-icons">
+              <p class="descrip pb-2"><span class="text-success">[fone]</span> (83)99999-9999</p>
+              <p class="descrip pb-2"><span class="text-success">[loc]</span> R. Fulano de Tal</p>
+              <p class="descrip pb-2"><span class="text-success">[e-mail]</span> jampasafe@cgu.gov.br</p>
+            </div>
+          </div>
         </section>
       </main>
 
 
-
-
-      <footer>
-        <h3 class="text-center text-uppercase">Footer</h3>
+      <footer class="mt-5">
+        
+        <div class="group d-flex flex-column justify-content-center align-items-center">
+          <div class="social-media">
+            <a class="social face bg-white p-1" href="#">[facebook]</a>
+            <a class="social insta bg-white p-1" href="#">[instagram]</a>
+            <a class="social twit bg-white p-1" href="#">[twitter]</a>
+          </div>
+          <p class="text-white">© 2022 - Todos os direitos reservados</p>
+        </div>
       </footer>
 
 

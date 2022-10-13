@@ -4,28 +4,49 @@ main {
 
 .contact {
     width: 100vw;
-    height: 20rem;
+    max-height: auto;
     background-color: #ffff;
   }
 
 .about {
     width: 100vw;
-    height: 20rem;
-    background-color: #6eaa5e;
+    max-height: auto;
+    background-color: #f1ffee;
   }
 
 .principal {
     width: 100vw;
     max-height: auto;
-    background-color: #93bf85;
+    background-color: #9ce087;
   }
 
-  .cards {
-    max-width: 80%;
-    margin: 0 auto;
-  }
+.cards {
+  max-width: 80%;
+  margin: 0 auto;
+}
 
-  .card {
-    border: none;
-    border-radius: 10px;
-  }
+.card {
+  border: none;
+  border-radius: 10px;
+}
+
+.descrip {
+  color: grey;
+}
+
+.about-us {
+  margin-left: 100px;
+  width: 573px;
+}
+
+.somos {
+  width: 335px;
+}
+
+.contato {
+  width: 300px;
+}
+
+.zap-button {
+  width: 200px;
+}

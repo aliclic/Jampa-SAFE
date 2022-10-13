@@ -1,5 +1,24 @@
 footer {
     width: 100vw;
-    height: 20rem;
-    background-color: rgb(208, 255, 208);
+    height: 15rem;
+    background-color: #198754
+    ;
   }
+
+.social {
+  border-radius: 50%;
+  text-decoration: none;
+  color: black;
+}
+
+.face:hover {
+  color: #3b5998;
+}
+
+.insta:hover {
+  color: #ffc0cb;
+}
+
+.twit:hover {
+  color: #00acee;
+}
