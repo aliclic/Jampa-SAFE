@@ -3,31 +3,49 @@ main {
 }
 
 .contact {
-    width: 100vw;
-    max-height: auto;
-    background-color: #ffff;
-  }
+  width: 100vw;
+  max-height: auto;
+  background-color: #ffff;
+}
 
 .about {
-    width: 100vw;
-    max-height: auto;
-    background-color: #f1ffee;
-  }
+  width: 100vw;
+  max-height: auto;
+  background-color: #f1ffee;
+}
 
 .principal {
-    width: 100vw;
-    max-height: auto;
-    background-color: #9ce087;
-  }
+  width: 100vw;
+  max-height: auto;
+  background-color: #9ce087;
+}
+
+.card-image {
+  max-height: 9rem;
+}
+
+.card-descricao {
+  text-align: justify;
+}
+
+.card-button {
+  height: 3rem;
+}
 
 .cards {
   max-width: 80%;
   margin: 0 auto;
 }
 
+.card-body {
+  margin-top: 0 !important;
+  align-items: self-end;
+}
+
 .card {
   border: none;
   border-radius: 10px;
+  max-height: auto;
 }
 
 .descrip {
