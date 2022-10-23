@@ -7,41 +7,21 @@ let bairro=document.getElementById('bairro')
 bairro.innerHTML=info.bairro
 } */
 
-const cards= [
-    
-    {
 
-   'id':'0',
-   'bairro':'',
-   'descrição':'',
-   'data':''
-
-
-},
-{
-    'id':'1',
-    'bairro':'',
-    'descrição':'',
-    'data':''
-},
-{
-'id':'2',
-    'bairro':'',
-    'descrição':'',
-    'data':''
-},
-{
-    'id':'3',
-        'bairro':'',
-        'descrição':'',
-        'data':''
-    },
-
-
-]
+const localstoragecards= JSON.parse(localStorage.getItem('cards'))
 
 
 
 
-    console.log(cards)
+const cards= localStorage.getItem('cards')!== null ? localstoragecards : []
+
+
+
+const updatelocalstorage=()=>{
+    localStorage.setItem('cards',JSON.stringify(cards))
+}
+
+
+
+
 
