@@ -31,3 +31,7 @@ footer {
 .twit:hover {
   color: #00acee;
 }
+
+.scale:hover{
+  transform: scale(1.4);
+}
