@@ -16,6 +16,7 @@ main {
 
 .principal {
   width: 100vw;
+  min-height: 30rem;
   max-height: auto;
   background-color: #9ce087;
 }
@@ -33,7 +34,7 @@ main {
 }
 
 .cards {
-  max-width: 89%;
+  max-width: 100%;
   margin: 0 auto;
 }
 
