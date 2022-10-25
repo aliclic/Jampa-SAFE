@@ -1,5 +1,5 @@
 
-const getlocalstorage=()=> JSON.parse(localStorage.getItem('db')) ?? []//passar para json.parse() se nao  ele ficará sempre string e nao poderá executar metodos como o push, o getitem sempre vai buscar um astring do localstorage
+const getlocalstorage=()=> JSON.parse(localStorage.getItem('db')) ?? [] //passar para json.parse() se nao  ele ficará sempre string e nao poderá executar metodos como o push, o getitem sempre vai buscar um astring do localstorage
 
 const setlocalstorage=(db_card)=> localStorage.setItem('db',JSON.stringify(db_card))
 
@@ -17,7 +17,7 @@ const readcard=()=> getlocalstorage()
 
 //UPDATE
 
-const updatecard=(card,index) => {
+const updatecard=(index,card) => {
     const db_card=readcard()
 db_card[index]=card //dados atualizados
 setlocalstorage(db_card)
@@ -26,9 +26,12 @@ setlocalstorage(db_card)
 //ERASE
 
 const deletecard = (index) => {
-    const db_card=readcard()
-    db_card.splice(index,1) //método splice para arrays. param1: índice de start , param2: qtd de elementos a remover!
+    const dbcard=readcard()
+    dbcard.splice(index,1)
+     setlocalstorage(dbcard)      //método splice para arrays. param1: índice de start , param2: qtd de elementos a remover!
 }
+
+
 const isvalid=()=> {
    return document.getElementById('form').reportValidity()// método retorna true se todos os required foram atendidos e falso se não!!
 }
@@ -61,7 +64,7 @@ const createrelato=(card,index)=> {
         cards.forEach(card => card.parentNode.removeChild(card)) //apagando o proprio elemento filho para evitar repetição dos cards!
     }
 
-const updatecards=()=>{ 
+const updatecards=()=>{  
     const db_card=readcard()
     clearcards() // para evitar que ao atualizar os cards se dupliquem na busca no localstorage
     db_card.forEach(createrelato)
@@ -70,6 +73,7 @@ const updatecards=()=>{
 const addcard=()=>{
 
     if(isvalid()){
+
         const card={
             descrição: document.getElementById('exampleFormControlTextarea1').value,
             tipo: document.getElementById('tipo').value,
@@ -77,8 +81,9 @@ const addcard=()=>{
             data:  document.getElementById('title').value.split('-').reverse().join('/'),
             img:document.getElementById('formFile').value
         }
+        
+        let index=document.getElementById('CEP').dataset.index
 
-        const index=document.getElementById('CEP').dataset.index
         if(index=='new'){
         createcard(card)
         console.log('cadastrando...')
@@ -86,9 +91,13 @@ const addcard=()=>{
         updatecards()
         }
         else{
+           
             updatecard(parseInt(index),card)
             updatecards()
+            clearfields()
+            
         }
+       
     }
 
 
@@ -113,7 +122,6 @@ const editarcard=(index)=>{
     const card=readcard()[index]
     card.index=index
      preencher(card)
-
 }
 
 
@@ -122,25 +130,37 @@ const editdelet=(event)=> {
     console.log(event.target.type) // retorna um pointerveent, target te retorna qual elemento vc clicou! type vai te informar o type do botao ja que so apenas o botoes possuem esse atributo
 
     if (event.target.type==='button'){
-       const [action,index] = event.target.id.split('-') //maneira diferente de nomear os indices de uma array
+       let [action,index] = event.target.id.split('-')
+       index=parseInt(index) //maneira diferente de nomear os indices de uma array
        if (action=='alterar'){
-        editarcard(parseInt(index))
+        editarcard(index)
+
        }
        else{
         const response= confirm('Deseja mesmo excluir o seu Relato?')
         if(response){
-       deletecard(parseInt(index))
+            console.log('apagando...')
+            console.log(typeof(index))  /////typeof method para descobrir o tipo de dado que a variavel possui
+       deletecard(index)
        updatecards()
         }
        }
     }
 }
 
-
+const mudança= ()=>{
+document.getElementById('CEP').dataset.index='new'
+}
 
 document.getElementById('modal-button').addEventListener('click',addcard) //param1: tipo do evento; param2: o que vai ser realizado, função sem o () senão vai  dar erro!!!!
 
+document.getElementById('relatar').addEventListener('click',mudança)
 
 
 document.querySelector('.cards').addEventListener('click',editdelet)
 
+const loadrefresh=()=>{
+    updatecards()
+}
+
+loadrefresh()
