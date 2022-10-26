@@ -26,6 +26,10 @@
     bairro.innerHTML=info.bairro
    // return bairro.innerHTML (isso aq retorna a Promise, e não de fato o atributo que a gnt quer!)
     }
+
+
+
+    
     
 
 

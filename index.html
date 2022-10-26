@@ -49,6 +49,22 @@
                   <button type="button" class="btn btn-success mx-3 fs-6" data-bs-toggle="modal" data-bs-target="#exampleModal" id="relatar">
                     Relatar
                   </button>
+                  <span class="mt-1 fs-5"> Acompanhe nossas Estatísticas!</span>
+                  <button type="button" class="btn btn-success mx-3 fs-6" id="ranking"> Ver Ranking</button>
+
+
+                  
+                  <dialog id="dialog" > 
+
+                    <div  style="width:80%;display: flex;justify-content: space-between;margin-left: 20%;">
+
+                    <h3 style="text-align: center;margin-left:23%;margin-top:4%;">Ranking de Tipos</h3>
+                    <button type="button" class="btn-close" id="closedialog" ></button>
+
+                  </div>
+
+          
+                  </dialog>
                   
                   <!-- Modal -->
                   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -102,7 +118,7 @@
         </section>
 
         <section class="principal mt-5">
-            <h3 class="text-center text-uppercase pt-5 text-black">Problemas relatados</h3>
+            <h3 class="text-center text-uppercase pt-5 text-black" id="cont"> 0 Problemas relatados</h3>
 
             <div class="cards d-flex flex-wrap" id='cards'>
             </div>

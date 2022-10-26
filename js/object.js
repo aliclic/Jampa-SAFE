@@ -45,6 +45,76 @@ const clearfields=()=>{
    )
 }
 
+ 
+const somar=(tipo)=>{
+    const dialog=document.getElementById('dialog')
+ const desmatamento= tipo.filter(tipo => tipo =='Desmatamento').length
+ const poluicaosolo=tipo.filter(tipo => tipo =='Poluição do Solo').length
+ const poluicaoagua=tipo.filter(tipo => tipo =='Poluição da Água').length
+ const poluicaoar=tipo.filter(tipo => tipo =='Poluição do Ar').length
+ const deposito=tipo.filter(tipo => tipo =='Depósitos de Lixo a Céu Aberto').length
+ const queimada=tipo.filter(tipo => tipo =='Queimada').length
+ const assoreamento=tipo.filter(tipo => tipo =='Assoreamento de Rios').length
+ const outros=tipo.filter(tipo => tipo =='Outros').length
+ if(dialog.childElementCount === 1){
+createdialog(desmatamento,poluicaosolo,poluicaoar,poluicaoagua,deposito,assoreamento,outros,queimada)
+ }
+ replacedialog(desmatamento,poluicaosolo,poluicaoar,poluicaoagua,deposito,assoreamento,outros,queimada)
+}
+const replacedialog=(desmatamento,poluicaosolo,poluicaoar,poluicaoagua,deposito,assoreamento,outros,queimada)=>{
+
+    const list=document.getElementById('lista')
+    list.innerHTML=`<li>Desmatamento: ${desmatamento} relatos</li> 
+    <li>Poluição do Solo: ${poluicaosolo} relatos</li>
+    <li> Poluição da Água: ${poluicaoagua} relatos</li>
+    <li>Poluição do Ar: ${poluicaoar} relatos</li>
+    <li>Dépositos de Lixo a Céu Aberto: ${deposito} relatos</li>
+    <li>Queimada: ${queimada} relatos</li>
+    <li>Assoreamento de Rios: ${assoreamento} relatos</li>
+    <li>Outros: ${outros} relatos</li> `
+
+}
+
+const createdialog=(desmatamento,poluicaosolo,poluicaoar,poluicaoagua,deposito,assoreamento,outros,queimada)=>{
+
+    const list= document.createElement('ul')
+    list.classList.add('socials')
+    list.classList.add('d-flex')
+    list.classList.add('justify-content-around')
+    list.classList.add('align-items-center')
+    list.classList.add('mt-5')
+    list.classList.add('pb-2')
+    list.id='lista'
+    list.style.flexDirection='column'
+    list.style.gap='12px'
+    
+    list.innerHTML=`<li>Desmatamento: ${desmatamento} relatos</li> 
+    <li>Poluição do Solo: ${poluicaosolo} relatos</li>
+    <li> Poluição da Água: ${poluicaoagua} relatos</li>
+    <li>Poluição do Ar: ${poluicaoar} relatos</li>
+    <li>Dépositos de Lixo a Céu Aberto: ${deposito} relatos</li>
+    <li>Queimada: ${queimada} relatos</li>
+    <li>Assoreamento de Rios: ${assoreamento} relatos</li>
+    <li>Outros: ${outros} relatos</li> `
+    const dialog=document.getElementById('dialog')
+    dialog.appendChild(list)
+    }
+
+
+const filtrar=()=>{
+    const db_card=readcard()
+ const tipo= db_card.map(card => card.tipo)
+ somar(tipo)
+}
+
+
+filtrar()
+
+const contar=()=>{
+    let cont=document.getElementById('cont')
+    const db_card=readcard()
+    cont.innerHTML=` ${db_card.length} Problemas relatados`
+}
 
 
 const createrelato=(card,index)=> {
@@ -85,17 +155,20 @@ const addcard=()=>{
         let index=document.getElementById('CEP').dataset.index
 
         if(index=='new'){
+        
         createcard(card)
         console.log('cadastrando...')
         clearfields()
         updatecards()
+        contar()
+        filtrar()
         }
         else{
            
             updatecard(parseInt(index),card)
             updatecards()
             clearfields()
-            
+            filtrar()
         }
        
     }
@@ -143,6 +216,8 @@ const editdelet=(event)=> {
             console.log(typeof(index))  /////typeof method para descobrir o tipo de dado que a variavel possui
        deletecard(index)
        updatecards()
+       contar()
+       filtrar()
         }
        }
     }
@@ -150,7 +225,10 @@ const editdelet=(event)=> {
 
 const mudança= ()=>{
 document.getElementById('CEP').dataset.index='new'
+clearfields()
 }
+
+
 
 document.getElementById('modal-button').addEventListener('click',addcard) //param1: tipo do evento; param2: o que vai ser realizado, função sem o () senão vai  dar erro!!!!
 
@@ -162,5 +240,20 @@ document.querySelector('.cards').addEventListener('click',editdelet)
 const loadrefresh=()=>{
     updatecards()
 }
+const opendialog=()=>{
+    const dialog=document.getElementById('dialog')
+    dialog.showModal()
+}
+
+const closedialog=()=>{
+    const dialog=document.getElementById('dialog')
+    dialog.close()
+}
+
+
+document.getElementById('ranking').addEventListener('click',opendialog)
+document.getElementById('closedialog').addEventListener('click',closedialog)
+
 
 loadrefresh()
+contar()
