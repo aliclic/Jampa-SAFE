@@ -152,7 +152,7 @@ const addcard=()=>{
             img:document.getElementById('formFile').value
         }
         
-        let index=document.getElementById('CEP').dataset.index
+        let index= document.getElementById('CEP').dataset.index
 
         if(index=='new'){
         
@@ -184,7 +184,7 @@ const preencher=(card)=>{
             document.getElementById('exampleFormControlTextarea1').value=card.descrição
             document.getElementById('tipo').value=card.tipo
             document.getElementById('CEP').value =card.bairro
-            document.getElementById('title').value=card.data
+            document.getElementById('title').value=card.data.split('/').reverse().join('-')
            //document.getElementById('formFile').value=card.img
            document.getElementById('CEP').dataset.index=card.index
 }
@@ -240,6 +240,8 @@ document.querySelector('.cards').addEventListener('click',editdelet)
 const loadrefresh=()=>{
     updatecards()
 }
+
+
 const opendialog=()=>{
     const dialog=document.getElementById('dialog')
     dialog.showModal()
@@ -252,6 +254,8 @@ const closedialog=()=>{
 
 
 document.getElementById('ranking').addEventListener('click',opendialog)
+
+
 document.getElementById('closedialog').addEventListener('click',closedialog)
 
 
