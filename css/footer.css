@@ -1,7 +1,7 @@
 footer {
     width: 100vw;
     height: auto;
-    background-color: #198754;
+    background-color: rgb(25, 135, 84);
     padding-top: 50px;
     padding-bottom: 20px;
   }
@@ -12,7 +12,7 @@ footer {
 
 .socials a {
   text-decoration: none;
-  color: #ffff;
+  color: rgb(255, 255, 255);
 }
 
 .social a i {
@@ -21,15 +21,15 @@ footer {
 }
 
 .face:hover {
-  color: #3b5998;
+  color: rgb(59, 89, 152);
 }
 
 .insta:hover {
-  color: #ffc0cb;
+  color: rgb(255, 192, 203);
 }
 
 .twit:hover {
-  color: #00acee;
+  color: rgb(0, 172, 238);
 }
 
 .scale:hover{

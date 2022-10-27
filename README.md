@@ -10,12 +10,10 @@ Uma aplicação web, para a relatação de problemas ambientais encontrados na c
 * João Marcos
 * Caio Bernadelli 
 
-- Tecnologias utilizadas:
+Tecnologias utilizadas:
 
 * HTML
 * CSS
 * BOOTSTRAP
 * GIT
 * JAVASCRIPT
-
-Nosso Projeto e o melhor
