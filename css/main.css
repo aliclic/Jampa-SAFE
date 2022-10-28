@@ -90,3 +90,10 @@ main {
 .linkzap {
   text-decoration: none;
 }
+
+
+@media screen and (min-width:320px){
+  body{
+    
+  }
+}

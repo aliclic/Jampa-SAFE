@@ -49,7 +49,7 @@ const somar=(tipo)=>{
     const dialog=document.getElementById('dialog')
  const desmatamento= tipo.filter(tipo => tipo =='Desmatamento').length
  const poluicaosolo=tipo.filter(tipo => tipo =='Poluição do Solo').length
- const poluicaoagua=tipo.filter(tipo => tipo =='Poluição da Água').length
+ const poluicaoagua=tipo.filter(tipo => tipo =='Poluição da água').length
  const poluicaoar=tipo.filter(tipo => tipo =='Poluição do Ar').length
  const deposito=tipo.filter(tipo => tipo =='Depósitos de Lixo a Céu Aberto').length
  const queimada=tipo.filter(tipo => tipo =='Queimada').length
