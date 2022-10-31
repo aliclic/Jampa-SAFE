@@ -8,7 +8,7 @@ Uma aplicação web, para a relatação de problemas ambientais encontrados na c
 
 * Alic Victor
 * João Marcos
-* Caio Bernadelli 
+* Caio Bernadelli Quirino 
 
 Tecnologias utilizadas:
 
