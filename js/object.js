@@ -63,14 +63,14 @@ createdialog(desmatamento,poluicaosolo,poluicaoar,poluicaoagua,deposito,assoream
 const replacedialog=(desmatamento,poluicaosolo,poluicaoar,poluicaoagua,deposito,assoreamento,outros,queimada)=>{
 
     const list=document.getElementById('lista')
-    list.innerHTML=`<li>Desmatamento: ${desmatamento} relatos</li> 
-    <li>Poluição do Solo: ${poluicaosolo} relatos</li>
-    <li> Poluição da Água: ${poluicaoagua} relatos</li>
-    <li>Poluição do Ar: ${poluicaoar} relatos</li>
-    <li>Dépositos de Lixo a Céu Aberto: ${deposito} relatos</li>
-    <li>Queimada: ${queimada} relatos</li>
-    <li>Assoreamento de Rios: ${assoreamento} relatos</li>
-    <li>Outros: ${outros} relatos</li> `
+    list.innerHTML=`<li>Desmatamento: ${desmatamento} relato(s)</li> 
+    <li>Poluição do Solo: ${poluicaosolo} relato(s)</li>
+    <li> Poluição da Água: ${poluicaoagua} relato(s)</li>
+    <li>Poluição do Ar: ${poluicaoar} relato(s)</li>
+    <li>Dépositos de Lixo a Céu Aberto: ${deposito} relato(s)</li>
+    <li>Queimada: ${queimada} relato(s)</li>
+    <li>Assoreamento de Rios: ${assoreamento} relato(s)</li>
+    <li>Outros: ${outros} relato(s)</li> `
 
 }
 
@@ -87,14 +87,14 @@ const createdialog=(desmatamento,poluicaosolo,poluicaoar,poluicaoagua,deposito,a
     list.style.flexDirection='column'
     list.style.gap='12px'
     
-    list.innerHTML=`<li>Desmatamento: ${desmatamento} relatos</li> 
-    <li>Poluição do Solo: ${poluicaosolo} relatos</li>
-    <li> Poluição da Água: ${poluicaoagua} relatos</li>
-    <li>Poluição do Ar: ${poluicaoar} relatos</li>
-    <li>Dépositos de Lixo a Céu Aberto: ${deposito} relatos</li>
-    <li>Queimada: ${queimada} relatos</li>
-    <li>Assoreamento de Rios: ${assoreamento} relatos</li>
-    <li>Outros: ${outros} relatos</li> `
+    list.innerHTML=`<li>Desmatamento: ${desmatamento} relato(s)</li> 
+    <li>Poluição do Solo: ${poluicaosolo} relato(s)</li>
+    <li> Poluição da Água: ${poluicaoagua} relato(s)</li>
+    <li>Poluição do Ar: ${poluicaoar} relato(s)</li>
+    <li>Dépositos de Lixo a Céu Aberto: ${deposito} relato(s)</li>
+    <li>Queimada: ${queimada} relato(s)</li>
+    <li>Assoreamento de Rios: ${assoreamento} relato(s)</li>
+    <li>Outros: ${outros} relato(s)</li> `
     const dialog=document.getElementById('dialog')
     dialog.appendChild(list)
     }
@@ -112,7 +112,7 @@ filtrar()
 const contar=()=>{
     let cont=document.getElementById('cont')
     const db_card=readcard()
-    cont.innerHTML=` ${db_card.length} Problemas relatados`
+    cont.innerHTML=` ${db_card.length} Problemas relatado(s)`
 }
 
 
